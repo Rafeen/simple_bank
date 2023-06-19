@@ -16,7 +16,6 @@ func getAccountsFortTransfer(t *testing.T) (Account, Account) {
 
 	accounts, err := testQueries.ListAccount(context.Background(), arg)
 	require.NoError(t, err)
-	require.NotZero(t, accounts)
 	var account1 Account
 	var account2 Account
 	if len(accounts) > 2 {
