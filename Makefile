@@ -30,5 +30,10 @@ sqlc:
 test:
 	go test -v -cover ./...
 
+# install dependencies
+deps:
+	go get
+	go mod tidy
+
 .PHONY:
-	startdb stopdb postgres createdb dropdb migrateup migratedown sqlc test
+	startdb stopdb postgres createdb dropdb migrateup migratedown sqlc test deps
